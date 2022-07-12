@@ -12,7 +12,7 @@ void Insert(int data){
     temp->data=data;
     temp->next=NULL;
     if(head==NULL){
-        temp->next=NULL;
+        //temp->next=NULL;
         head=temp;
         return ;
     }
@@ -22,7 +22,7 @@ void Insert(int data){
         
     }
     traverse->next=temp;
-    temp->next=NULL;
+    //temp->next=NULL;
 
 }
 void Print(){
