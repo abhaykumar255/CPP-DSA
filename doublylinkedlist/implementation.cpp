@@ -28,6 +28,20 @@ void InsertatHead(int x){
     head=newNode;
 
 }
+void InsertatEnd(int x){
+    Node* newNode=GetnewNode(x);
+    // if(head==NULL){
+    //     head=newNode;
+    //     return;
+    // }
+    Node* traverse=head;
+    while(traverse->next!=NULL){
+        traverse=traverse->next;
+    }
+    traverse->next=newNode;
+    newNode->prev=traverse;
+
+}
 void Print(){
     Node* temp=head;
     cout<<"Forwarding :- "<<endl;
@@ -58,15 +72,19 @@ void ReversePrint(){
 int main(){
     head=NULL;
     InsertatHead(5);
+    InsertatEnd(600);
     Print();
     ReversePrint();
     InsertatHead(15);
+    InsertatEnd(100);
     Print();
     ReversePrint();
     InsertatHead(52);
+    InsertatEnd(200);
     Print();
     ReversePrint();
     InsertatHead(2);
+    InsertatEnd(500);
     Print();
     ReversePrint();
 }
