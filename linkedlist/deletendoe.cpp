@@ -47,7 +47,7 @@ void Print(){
         cout<<temp->data<<" -> ";
         temp=temp->next;
     }
-    cout<<"NULL"<<"\n";
+    cout<<"NULL"<<endl;
     
 }
 int main(){
