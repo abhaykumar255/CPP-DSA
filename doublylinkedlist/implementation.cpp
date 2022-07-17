@@ -65,7 +65,7 @@ void ReversePrint(){
         cout<<temp->data<<" -> ";
         temp=temp->prev;
     }
-    cout<<"NULL"<<"\n";
+    cout<<"NULL"<<endl;
 
 }
 
