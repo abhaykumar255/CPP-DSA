@@ -29,41 +29,27 @@ Bstnode* Insert(Bstnode* root,int data){
     }
     return root;
 }
-bool Search(Bstnode* root,int data){
-    if(root==NULL) return false;
-    else if(data==root->data) return true;
-    else if(data<=root->data) return Search(root->left,data);
-    else return Search(root->right,data);
+int height(Bstnode* node){
+    if(node==NULL){
+        return 0;
+    }
+    int lheigth=height(node->left);
+    int rheigth=height(node->left);
+    return max(lheigth,rheigth)+1;
 }
 int main(){
     // pointer to root node
     Bstnode* root=NULL; // create an empty tree
     root=Insert(root,15);
     root=Insert(root,5);
+    root=Insert(root,3);
+    root=Insert(root,2);
     root=Insert(root,10);
     root=Insert(root,4);
     root=Insert(root,20);
     root=Insert(root,17);
     root=Insert(root,25);
-    int number;
-    cout<<"Enter an element to search :- ";
-    cin>>number;
-    if(Search(root,number)) cout<<"Element found";
-    else cout<<"Element not found";
+    root=Insert(root,30);
+    cout<<"Heigth of tree is:- "<<height(root);
+    
 }
-
-
-// void Insert(Bstnode** root,int data){
-//     if(*root==NULL){
-//         *root=Getnode(data);
-//         return ;
-//     }
-// }
-// int main(){
-//     Bstnode* root=NULL;
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-// }

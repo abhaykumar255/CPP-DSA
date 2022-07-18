@@ -29,11 +29,33 @@ Bstnode* Insert(Bstnode* root,int data){
     }
     return root;
 }
-bool Search(Bstnode* root,int data){
-    if(root==NULL) return false;
-    else if(data==root->data) return true;
-    else if(data<=root->data) return Search(root->left,data);
-    else return Search(root->right,data);
+int findmin(Bstnode* root){
+    if(root==NULL) {
+        cout<<"Error";
+        return -1;
+    }
+    else if(root->left==NULL){
+        return root->data;
+    }
+    return findmin(root->left);
+
+    // for  iterative
+    // while(root->left!=NULL){
+    //     root=root->left;
+    // }
+    // return root->data;
+
+}
+int findmax(Bstnode* root){
+    if(root==NULL){
+        cout<<"error";
+        return -1;
+    }
+    while(root->right!=NULL){
+        root=root->right;
+    }
+    return root->data;
+
 }
 int main(){
     // pointer to root node
@@ -45,25 +67,10 @@ int main(){
     root=Insert(root,20);
     root=Insert(root,17);
     root=Insert(root,25);
-    int number;
-    cout<<"Enter an element to search :- ";
-    cin>>number;
-    if(Search(root,number)) cout<<"Element found";
-    else cout<<"Element not found";
+    if(findmax(root)){
+        cout<<"Max is :- "<<findmax(root);
+    }
+    else{
+        cout<<"Null Binary tree";
+    }
 }
-
-
-// void Insert(Bstnode** root,int data){
-//     if(*root==NULL){
-//         *root=Getnode(data);
-//         return ;
-//     }
-// }
-// int main(){
-//     Bstnode* root=NULL;
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-//     Insert(&root,2);
-// }
