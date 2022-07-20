@@ -25,7 +25,7 @@ Node* Insert(Node* root, char data){
 }
 bool issublefttreee(Node* root, char value){
     if (root==NULL) return true;
-    if ( root->data<=value && issublefttreee(root->left,value) && issublefttreee(root->left,value) ){
+    if ( root->data<=value && issublefttreee(root->left,value) && issublefttreee(root->right,value) ){
         return true;
     }
     else {
