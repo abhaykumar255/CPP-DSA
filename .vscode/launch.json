@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "d:/CPP-DSA/Tree",
-      "program": "d:/CPP-DSA/Tree/build/Debug/outDebug",
+      "cwd": "d:/CPP-DSA/Graph",
+      "program": "d:/CPP-DSA/Graph/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
