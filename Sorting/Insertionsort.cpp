@@ -2,19 +2,20 @@
 using namespace std;
 
 
-void Bubblesort(int a[], int n){   
-    for(int k=0;k<n-1;k++){
-        for(int i=0;i<n-k-1;i++){
-            if(a[i]>a[i+1]){
-                
-                int temp=a[i];
-                a[i]=a[i+1];
-                a[i+1]=temp;
-            }
+void Insertionsort(int a[], int n){
+    
+    for(int i=1;i<n-1;i++){
+        int value=a[i];
+        int hole=i;
+        while(hole>0 && a[hole-1]>value){
+            a[hole]=a[hole-1];
+            hole=hole-1;
         }
-    }
-}
+        a[hole]=value;
 
+    }
+
+}
 int main(){
     int arr[]={2,7,4,1,5,3};
     int n=sizeof(arr)/sizeof(int);
@@ -22,9 +23,10 @@ int main(){
         cout<<arr[i]<<" ";
     }
     cout<<endl;
-    Bubblesort(arr,n);
+    Insertionsort(arr,n);
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
+
     return 0;
 }
