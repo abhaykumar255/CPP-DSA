@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "d:/CPP-DSA/Sorting",
-      "program": "d:/CPP-DSA/Sorting/build/Debug/outDebug",
+      "cwd": "d:/CPP-DSA/Recursion",
+      "program": "d:/CPP-DSA/Recursion/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
